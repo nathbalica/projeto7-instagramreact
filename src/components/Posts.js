@@ -118,7 +118,7 @@ function Post(props) {
       
       
     return (
-        <article>
+        <article data-test="post">
             <div className="post-header">
                 <div>
                     <img src={props.imgUser} alt={props.nameUser} />
@@ -128,6 +128,7 @@ function Post(props) {
             </div>
 
             <img
+                data-test="post-image"
                 src={props.imgPost}
                 alt={props.nameUser}
                 onDoubleClick={likedWithImage}
@@ -135,18 +136,18 @@ function Post(props) {
             {showHeart && <HeartAnimation />}
             <div className="post-icons flex-space-center">
                 <div className="bottoms">
-                    <ion-icon name={liked ? "heart" : "heart-outline"} onClick={likePost} id={liked ? "redColor" : ""}></ion-icon>
+                    <ion-icon data-test="like-post" name={liked ? "heart" : "heart-outline"} onClick={likePost} id={liked ? "redColor" : ""}></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
-                <ion-icon name={isSaved ? "bookmark" : "bookmark-outline"} onClick={savePost}></ion-icon>
+                <ion-icon data-test="save-post" name={isSaved ? "bookmark" : "bookmark-outline"} onClick={savePost}></ion-icon>
             </div>
 
             <footer>
                 <img src={props.imgFooter} alt={props.userFooter} />
                 <p>
                     Curtido por <span className="negrito">{props.userFooter}</span> e
-                    <span className="negrito"> outras {likesAmount.toLocaleString('pt-BR')} pessoas</span>
+                    <span data-test="likes-number" className="negrito"> outras {likesAmount.toLocaleString('pt-BR')} pessoas</span>
                 </p>
             </footer>
 

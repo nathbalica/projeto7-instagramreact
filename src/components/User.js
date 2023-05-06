@@ -20,10 +20,10 @@ export default function User( props ) {
 
     return (
         <div className="sidebar-header">
-            <img src={profileImg} onClick={changeprofileImg} alt={"userName"} />
+            <img data-test="profile-image" src={profileImg} onClick={changeprofileImg} alt={"userName"} />
             <div>
-                <p>{userName}</p>
-                <ion-icon name="pencil" onClick={changeUserName}></ion-icon>
+                <p data-test="name">{userName}</p>
+                <ion-icon data-test="edit-name" name="pencil" onClick={changeUserName}></ion-icon>
             </div>
         </div>
     )
