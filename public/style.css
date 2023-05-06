@@ -27,6 +27,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .container {
@@ -199,6 +200,7 @@ input::placeholder {
   border-radius: 3px;
   height: auto;
   margin-bottom: 60px;
+  position: relative;
 }
 
 .post-header {
@@ -235,7 +237,50 @@ article hr {
 article img {
   width: 100%;
   height: 612px;
+  object-fit: cover; 
 }
+
+
+.heart-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: heart 0.8s ease-in-out forwards;
+  transform-origin: center center; /* adicionado */
+}
+
+@keyframes heart {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+
+/* .heart-animation path {
+  transform: scale(0.2);
+}
+
+.heart-animation path:hover {
+  cursor: pointer;
+}
+
+.heart-animation path:hover,
+.heart-animation path:focus {
+  transform: scale(1);
+} */
 
 article video {
   width: 100%;
@@ -245,6 +290,10 @@ article video {
 
 .post-icons div {
   margin-left: 18px;
+}
+
+#redColor {
+  color: red;
 }
 
 .bottoms ion-icon:nth-child(2) {
@@ -289,6 +338,7 @@ article video {
   margin-bottom: 12px;
   margin-left: 10px;
 }
+
 
 .comment-users {
   font-size: 14px;
@@ -351,7 +401,7 @@ article video {
   font-size: 16px;
 }
 
-sidebar {
+aside {
   background-color: pink;
   width: 293px;
   transform: translateX(220%);
@@ -380,22 +430,24 @@ sidebar {
   margin-right: 17px;
 }
 
-.sidebar-header div p:nth-child(1) {
+.sidebar-header p{
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  font-weight: bold;
   color: #262626;
   cursor: pointer;
 }
 
-.sidebar-header div p:nth-child(2) {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: #8e8e8e;
-  cursor: pointer;
+.sidebar-header div{
+  display: flex;
+
 }
 
+.sidebar-header ion-icon{
+  font-size: 18px;
+  padding-left: 5px;
+}
 .sidebar-area-sugestion {
   width: 100%;
   display: flex;
@@ -472,7 +524,7 @@ sidebar {
   opacity: 0.7;
 }
 
-sidebar footer {
+aside footer {
   display: flex;
   flex-direction: column;
 }
@@ -483,7 +535,7 @@ sidebar footer {
   margin-bottom: 18px;
 }
 
-sidebar footer p {
+aside footer p {
   font-weight: 400;
   color: #c7c7c7;
   font-size: 11px;
@@ -491,7 +543,7 @@ sidebar footer p {
 }
 
 @media (max-width: 935px) {
-  sidebar {
+  aside {
     display: none;
   }
   .icons {
@@ -562,6 +614,7 @@ sidebar footer p {
   }
 
   article > img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }

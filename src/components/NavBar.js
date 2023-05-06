@@ -1,18 +1,18 @@
 export default function NavBar(){
     return (
         <header>
-            <div class="container desktop">
-                <div class="logo">
+            <div className="container desktop">
+                <div className="logo">
                 <ion-icon name="logo-instagram"></ion-icon>
                 <div></div>
                 <img src="assets/logo.png" />
                 </div>
 
-                <div class="search">
+                <div className="search">
                 <input type="search" name="" id="" placeholder="Pesquisar" />
                 </div>
 
-                <div class="icons">
+                <div className="icons">
                 <ion-icon name="paper-plane-outline"></ion-icon>
                 <ion-icon name="compass-outline"></ion-icon>
                 <ion-icon name="heart-outline"></ion-icon>
@@ -20,8 +20,8 @@ export default function NavBar(){
                 </div>
             </div>
 
-            <div class="mobile">
-                <div class="logo-icons">
+            <div className="mobile">
+                <div className="logo-icons">
                 <ion-icon name="logo-instagram"></ion-icon>
                 <img src="./images/logo.png" alt="" />
                 <ion-icon name="paper-plane-outline"></ion-icon>

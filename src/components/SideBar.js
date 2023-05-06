@@ -3,12 +3,12 @@ import User from "./User"
 
 export default function Sidebar() {
     return (
-        <sidebar>
-            <div class="sidebar-users-area">
-                <User />
+        <aside>
+            <div className="sidebar-users-area">
+                <User user={"emberjs"} image={"./assets/sidebar/emberjs.png"} />
                 <Suggestions />
                 <footer>
-                    <div class="footer-area-info">
+                    <div className="footer-area-info">
                         <p>Sobre •</p>
                         <p>Ajuda •</p>
                         <p>Imprensa •</p>
@@ -26,6 +26,6 @@ export default function Sidebar() {
                     </div>
                 </footer>
             </div>
-        </sidebar>
+        </aside>
     )
 }

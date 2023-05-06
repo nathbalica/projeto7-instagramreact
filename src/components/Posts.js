@@ -1,180 +1,187 @@
+import { useState } from "react"
+
 export default function Posts() {
+    const posts = [
+        {
+            id: 1,
+            imgUser: "./assets/stories/javascript.png",
+            nameUser: "javascriptbr",
+            imgPost: "./assets/javascriptskills.jpg",
+            imgFooter: "./assets/stories/html-language.png",
+            userFooter: "lovehtml",
+            likesAmount: 24000,
+            description: "Principais Hard Skills para se aprender em Javascript."
+        },
+        {
+            id: 2,
+            imgUser: "./assets/stories/javascript.png",
+            nameUser: "javascriptbr",
+            imgPost: "./assets/todoapp-react.jpg",
+            imgFooter: "./assets/stories/vue.png",
+            userFooter: "vueframework",
+            likesAmount: 101523,
+            description: "ToDo em react para vocês!"
+        },
+        {
+            id: 3,
+            imgUser: "./assets/stories/nodejs.png",
+            nameUser: "learnode",
+            imgPost: "./assets/post-nodevsjs.jpg",
+            imgFooter: "./assets/stories/typescript.png",
+            userFooter: "typescriptBR",
+            likesAmount: 5000,
+            description: "E ai, javascript ou node?"
+
+        }
+    ]
+
     return (
-        <div class="posts">
-            <article>
-                <div class="post-header">
-                    <div>
-                        <img src="assets/stories/javascript.png" alt="" />
-                        <p>javascriptbr</p>
-                    </div>
-                    <ion-icon name="ellipsis-horizontal"></ion-icon>
-                </div>
-
-                <hr />
-                <img src="assets/javascriptskills.jpg" />
-                <hr />
-
-                <div class="post-icons flex-space-center">
-                    <div class="bottoms">
-                        <ion-icon name="heart-outline"></ion-icon>
-                        <ion-icon name="chatbubble-outline"></ion-icon>
-                        <ion-icon name="paper-plane-outline"></ion-icon>
-                    </div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-
-                <footer>
-                    <img src="./assets/stories/html-language.png" />
-                    <p>
-                        Curtido por <span class="negrito">lovehtml</span> e
-                        <span class="negrito">outras 24.000 pessoas</span>
-                    </p>
-                </footer>
-
-                <div class="post-description">
-                    <p>
-                        <span>javascriptbr</span> Principais Hard Skills para se
-                        aprender em Javascript.
-                    </p>
-                </div>
-
-                <div class="comments">
-                    <p>Veja todos os 5.286 comentários</p>
-
-                    <div class="main-comments">
-                        <div class="comment">
-                            <div class="comment-users">lovehtml</div>
-                            <p>Não esqueçam do básico! Vem pro front 😉</p>
-                            <div class="likes">
-                                <ion-icon name="heart-outline"></ion-icon>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-comments">
-                        <div class="comment">
-                            <div class="comment-users">npm_install</div>
-                            <p>
-                                Tudo começa com um npm install, o back nao vai te
-                                decepcionar 🐧
-                            </p>
-                            <div class="likes">
-                                <ion-icon name="heart-outline"></ion-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="post-header">
-                    <div>
-                        <img src="assets/stories/javascript.png" alt="" />
-                        <p>javascriptbr</p>
-                    </div>
-                    <ion-icon name="ellipsis-horizontal"></ion-icon>
-                </div>
-
-                <video controls autoplay muted>
-                    <source
-                        src="./assets/Aprendajs.mp4"
-                        type="video/mp4"
-                        controls
-                        autoplay
-                        muted
-                    />
-                    <source
-                        src="./assets/Aprendajs.ogv"
-                        type="video/ogg"
-                        controls
-                        autoplay
-                        muted
-                    />
-                </video>
-
-                <div class="post-icons flex-space-center">
-                    <div class="bottoms">
-                        <ion-icon name="heart-outline"></ion-icon>
-                        <ion-icon name="chatbubble-outline"></ion-icon>
-                        <ion-icon name="paper-plane-outline"></ion-icon>
-                    </div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-
-                <footer>
-                    <img src="./assets/stories/vue.png" />
-                    <p>
-                        Curtido por <span class="negrito">vueframework</span> e
-                        <span class="negrito">outras 101.523 pessoas</span>
-                    </p>
-                </footer>
-
-                <div class="post-description">
-                    <p>
-                        <span>javascriptbr</span> Evolução do Javascript, gostam da
-                        linguagem?
-                    </p>
-                </div>
-
-                <div class="comments">
-                    <p>Veja todos os 30.000 comentários</p>
-
-                    <div class="main-comments">
-                        <div class="comment">
-                            <div class="comment-users">vueframework</div>
-                            <p>Esse eu conheço, meu amigão no top 1!</p>
-                            <div class="likes">
-                                <ion-icon name="heart-outline"></ion-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="post-header">
-                    <div>
-                        <img src="./assets/stories/nodejs.png" alt="" />
-                        <p>learnode</p>
-                    </div>
-                    <ion-icon name="ellipsis-horizontal"></ion-icon>
-                </div>
-                <img src="./assets/post-nodevsjs.jpg" />
-
-                <div class="post-icons flex-space-center">
-                    <div class="bottoms">
-                        <ion-icon name="heart-outline"></ion-icon>
-                        <ion-icon name="chatbubble-outline"></ion-icon>
-                        <ion-icon name="paper-plane-outline"></ion-icon>
-                    </div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-
-                <footer>
-                    <img src="./assets/stories/typescript.png" />
-                    <p>
-                        Curtido por <span class="negrito">typescriptBR</span> e
-                        <span class="negrito"> outras 5.000 pessoas</span>
-                    </p>
-                </footer>
-
-                <div class="post-description">
-                    <p><span>learnode</span> E ai, javascript ou node?</p>
-                </div>
-
-                <div class="comments">
-                    <p>Veja todos os 342 comentários</p>
-
-                    <div class="main-comments">
-                        <div class="comment">
-                            <div class="comment-users">typescriptBR</div>
-                            <p>Eu voto no node 😀</p>
-                            <div class="likes">
-                                <ion-icon name="heart-outline"></ion-icon>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
+        <div className="posts">
+            {posts.map((item) => (
+                <Post
+                    key={item.id}
+                    imgUser={item.imgUser}
+                    nameUser={item.nameUser}
+                    imgPost={item.imgPost}
+                    imgFooter={item.imgFooter}
+                    userFooter={item.userFooter}
+                    likesAmount={item.likesAmount}
+                    description={item.description}
+                />
+            ))}
         </div>
     )
 }
+
+
+
+function Post(props) {
+    const [isSaved, setIsSaved] = useState(false)
+    const [liked, setLiked] = useState(false)
+    const [likesAmount, setLikesAmount] = useState(props.likesAmount)
+    const [showHeart, setShowHeart] = useState(false);
+
+
+    const savePost = () => {
+        setIsSaved(!isSaved)
+    }
+
+    const likePost = () => {
+        if (liked) {
+            setLiked(false)
+            setLikesAmount(likesAmount - 1)
+        } else {
+            setLiked(true)
+            setLikesAmount(likesAmount + 1)
+        }
+    }
+
+    const likedWithImage = () => {
+        if (!liked) {
+            setLiked(true)
+            setLikesAmount(likesAmount + 1)
+            setShowHeart(true);
+            setTimeout(() => setShowHeart(false), 800);
+        }
+    }
+
+    function HeartAnimation() {
+        return (
+          <div className="heart-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+              <path
+                fill="white"
+                d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="scale"
+                  from="0.2"
+                  to="1"
+                  dur="0.3s"
+                  repeatCount="1"
+                />
+                <animate
+                  attributeName="opacity"
+                  from="1"
+                  to="0"
+                  dur="0.5s"
+                  begin="0.5s"
+                  repeatCount="1"
+                />
+              </path>
+            </svg>
+          </div>
+        );
+      }
+      
+      
+    return (
+        <article>
+            <div className="post-header">
+                <div>
+                    <img src={props.imgUser} alt={props.nameUser} />
+                    <p>{props.nameUser}</p>
+                </div>
+                <ion-icon name="ellipsis-horizontal"></ion-icon>
+            </div>
+
+            <img
+                src={props.imgPost}
+                alt={props.nameUser}
+                onDoubleClick={likedWithImage}
+            />
+            {showHeart && <HeartAnimation />}
+            <div className="post-icons flex-space-center">
+                <div className="bottoms">
+                    <ion-icon name={liked ? "heart" : "heart-outline"} onClick={likePost} id={liked ? "redColor" : ""}></ion-icon>
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
+                <ion-icon name={isSaved ? "bookmark" : "bookmark-outline"} onClick={savePost}></ion-icon>
+            </div>
+
+            <footer>
+                <img src={props.imgFooter} alt={props.userFooter} />
+                <p>
+                    Curtido por <span className="negrito">{props.userFooter}</span> e
+                    <span className="negrito"> outras {likesAmount.toLocaleString('pt-BR')} pessoas</span>
+                </p>
+            </footer>
+
+            <div className="post-description">
+                <p>
+                    <span>{props.nameUser}</span> {props.description}
+                </p>
+            </div>
+
+            <div className="comments">
+                <p>Veja todos os 5.286 comentários</p>
+
+                <div className="main-comments">
+                    <div className="comment">
+                        <div className="comment-users">lovehtml</div>
+                        <p>Não esqueçam do básico! Vem pro front 😉</p>
+                        <div className="likes">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div className="main-comments">
+                    <div className="comment">
+                        <div className="comment-users">npm_install</div>
+                        <p>
+                            Tudo começa com um npm install, o back nao vai te
+                            decepcionar 🐧
+                        </p>
+                        <div className="likes">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    )
+}
+
